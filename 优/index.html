@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="Keywords" content="优8网">
+		<meta name="Description" content="优8网是！">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>优8网</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+
+	<body>
+		<div class="w-top w">
+			<div class="ww">
+				<div class="left">
+					<a href="#"><img class="top-logo" src="img/logo.jpg" alt="" /></a>
+				</div>
+				<ul>
+					<li class="top-li">
+						<a href="#">首页</a>
+					</li>
+					<li class="top-li">
+						<a href="#">发现</a>
+					</li>
+					<li class="top-li">
+						<a href="#">游戏</a>
+					</li>
+				</ul>
+				<div class="top-icon right">
+					<a href="#"><img src="img/index2.jpg" alt="" /></a>
+					<a href="#"><img src="img/index3.jpg" alt="" /></a>
+				</div>
+				<div class="top-search right">
+					<script type="text/javascript">
+						<!--
+						function checkSearchForm() {
+							if(document.getElementById('keyword').value) {
+								return true;
+							} else {
+								alert("请输入搜索关键词！");
+								return false;
+							}
+						}
+						-->
+					</script>
+					<form class="form" id="searchForm" name="searchForm" method="get" action="" onsubmit="return checkSearchForm()">
+						<input id="keyword" name="keywords" placeholder="搜索你要找的人" class="text" type="text" autocomplete="off">
+						<input class="button" name="imageField" type="submit" value="">
+					</form>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="w-main w">
+			<div class="w-main-cont ww">
+				<div class="main-leftarea left">
+					<div class="leftone">
+						<div class="leftone-title"></div>
+						<div style="width: 100%;"><textarea id="TEXT" class="leftone-textarea" name="liuyan"></textarea></div>
+						<div class="leftone-bt">
+							<ul>
+								<li>
+									<a class="leftone-bt-1" href="#">表情</a>
+								</li>
+								<li>
+									<a class="leftone-bt-2" href="#">图片</a>
+								</li>
+								<li>
+									<a class="leftone-bt-3" href="#">视频</a>
+								</li>
+								<li>
+									<a class="leftone-bt-4" href="#">附件</a>
+								</li>
+								<li>
+									<a class="leftone-bt-5" href="#">话题</a>
+								</li>
+								<li class="leftone-bt-6" id="alt">@</li>
+							</ul>
+							<div class="leftone-bt-right right">
+								<span onclick="btpublic()">公开</span>
+								<div align="center" class="public-layer">
+									<div onclick="btpublic()" class="public-layer-div">公开</div>
+									<div onclick="btpublic()" class="public-layer-div">不公开</div>
+								</div>
+								<button>发送</button>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="lefttwo">
+						<span class="span-top">Yo圈</span>
+						<span>大厅</span>
+						<span class="bg-nav">我的赞赏</span>
+						<span>我的收藏</span>
+					</div>
+					<div class="lefttwo-bottom">
+						<span class="span-top-2 bg-nav2">全部</span>
+						<span>原创</span>
+						<span>转发</span>
+						<span>图片</span>
+						<span>视频</span>
+					</div>
+
+					<div class="leftthree">
+						<div onclick="shrink()" class="bt-leftthree bt-leftthree-1"></div>
+						<div class="leftthree-header">
+							<div class="leftthree-header-pic ">
+								<a href="#"><img src="img/guest1.jpg" /></a>
+							</div>
+							<div class="leftthree-header-word">
+								<div class="word-top">
+									<a href="#"><b>泰塔剧院</b></a>
+								</div>
+								<div class="word-mid">11分钟前&nbsp;来自&nbsp;微博&nbsp;weibo.com</div>
+								<div class="word-bot">
+									有人说摄影的目的就是寻找“美”。影像艺术家，绘摄影 理念的发起人《人人都是影响生活家》 作者玉明，12月9日将在@时尚廊 开讲《你好！影像生活馆》系列公开课。扫描二维码报名&nbsp;将有机会和小米老师一同讨论和生活影相的关系。一起从生活中发现美，享受美，创造美，成为自己的影像生活家。
+								</div>
+								<div class="word-pic">
+									<a href="#"><img src="img/pic1.jpg" alt="" /></a>
+									<a href="#"><img src="img/pic1.jpg" alt="" /></a>
+									<a href="#"><img src="img/pic1.jpg" alt="" /></a>
+									<a href="#"><img src="img/pic1.jpg" alt="" /></a>
+									<a href="#"><img src="img/pic1.jpg" alt="" /></a>
+									<a href="#"><img src="img/pic1.jpg" alt="" /></a>
+									<a href="#"><img src="img/pic1.jpg" alt="" /></a>
+									<a href="#"><img src="img/pic1.jpg" alt="" /></a>
+									<a href="#"><img src="img/pic1.jpg" alt="" /></a>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="leftthree-bt">
+							<ul>
+								<li class="leftthree-bt-1">
+									<a class="leftthree-bt-cont" href="#">赏</a>
+								</li>
+								<li class="leftthree-bt-2">
+									<a class="leftthree-bt-cont" href="#">分享</a>
+								</li>
+								<li class="leftthree-bt-3">
+									<a class="leftthree-bt-cont" href="#">评论</a>
+								</li>
+								<li class="leftthree-bt-4">
+									<a class="leftthree-bt-cont" href="#">转发</a>
+								</li>
+								<li class="leftthree-bt-5">
+									<a href="#">
+										<div class="leftthree-bot-cont-2 linelimit">赞(<span>100000</span>)</div>
+									</a>
+								</li>
+								<li class="leftthree-bt-6">
+									<a href="#">
+										<div class="leftthree-bot-cont-3 linelimit">收藏(<span>456450</span>)</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="leftthree-bot">
+							<ul>
+								<li>
+									<a href="#"><img src="img/pic_leftthree.png" alt="" />
+										<div>(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</div>
+										<p class="linelimit">454655</p>
+									</a>
+								</li>
+								<li>
+									<a href="#"><img src="img/pic_leftthree.png" alt="" />
+										<div>(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</div>
+										<p class="linelimit">45465</p>
+									</a>
+								</li>
+								<li>
+									<a href="#"><img src="img/pic_leftthree.png" alt="" />
+										<div>(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</div>
+										<p class="linelimit">45465</p>
+									</a>
+								</li>
+								<li>
+									<a href="#"><img src="img/pic_leftthree.png" alt="" />
+										<div>(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</div>
+										<p class="linelimit">45465</p>
+									</a>
+								</li>
+								<li>
+									<a href="#"><img src="img/pic_leftthree.png" alt="" />
+										<div>(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</div>
+										<p class="linelimit">45465</p>
+									</a>
+								</li>
+								<li>
+									<a href="#"><img src="img/pic_leftthree.png" alt="" />
+										<div>(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</div>
+										<p class="linelimit">45465</p>
+									</a>
+								</li>
+								<li>
+									<a href="#"><img src="img/pic_leftthree.png" alt="" />
+										<div>(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</div>
+										<p class="linelimit">45465</p>
+									</a>
+								</li>
+								<li>
+									<a href="#"><img class="pic-leftthree" src="img/pic_leftthree2.png" />
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="main-rightarea left">
+					<div class="rightone">
+						<div class="rightone-top">
+							<img class="left" src="img/you2.png" />
+							<div class="rightone-top-right linelimit left">
+								<a href="#"><b>香蕉鱼书店是打发士大夫士大夫士大夫</b></a>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="rightone-bot">
+							<div class="rightone-bot-fir left" align="center">
+								<div class="linelimit"><b>4778sdfsddsfs</b></div>
+								<p>分享</p>
+							</div>
+							<div class="rightone-bot-sec left" align="center">
+								<div class="border-r"></div>
+								<div class="linelimit"><b>4778sdfsddsfs</b></div>
+								<p>正在关注</p>
+							</div>
+							<div class="rightone-bot-thi left" align="center">
+								<div class="border-r"></div>
+								<div class="linelimit"><b>4778</b></div>
+								<p>粉丝</p>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="righttwo">
+						<div class="righttwo-top"><b>话题趋势</b></div>
+						<div class="righttwo-bot">
+							<div>
+								<a href="#">
+									<div class="left righttwo-bot-left linelimit">#蓝色的大海撒的发生的发生的#撒旦法撒旦法</div>
+									<div class="right righttwo-bot-right linelimit" align="right">2亿</div>
+									<div class="clear"></div>
+								</a>
+							</div>
+							<div>
+								<a href="#">
+									<div class="left righttwo-bot-left linelimit">#蓝色的大海撒的发生的发生的#撒旦法撒旦法sdfs</div>
+									<div class="right righttwo-bot-right linelimit" align="right">2亿</div>
+									<div class="clear"></div>
+								</a>
+							</div>
+							<div>
+								<a href="#">
+									<div class="left righttwo-bot-left linelimit">#蓝色的大海撒的发生的发生的#撒旦法撒旦法</div>
+									<div class="right righttwo-bot-right linelimit" align="right">2亿</div>
+									<div class="clear"></div>
+								</a>
+							</div>
+							<div>
+								<a href="#">
+									<div class="left righttwo-bot-left linelimit">#蓝色的大海撒的发生的发生的#撒旦法撒旦法</div>
+									<div class="right righttwo-bot-right linelimit" align="right">2亿</div>
+									<div class="clear"></div>
+								</a>
+							</div>
+							<div>
+								<a href="#">
+									<div class="left righttwo-bot-left linelimit">#蓝色的大海撒的发生的发生的#撒旦法撒旦法</div>
+									<div class="right righttwo-bot-right linelimit" align="right">2亿</div>
+									<div class="clear"></div>
+								</a>
+							</div>
+							<div>
+								<a href="#">
+									<div class="left righttwo-bot-left linelimit">#蓝色的大海撒的发生的发生的#撒旦法撒旦法</div>
+									<div class="right righttwo-bot-right linelimit" align="right">2亿</div>
+									<div class="clear"></div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="rightthree">
+						<div class="rightthree-top"><b>打赏榜</b>
+							<div class="right clear">
+								<a href="#">我要上榜</a>
+							</div>
+						</div>
+						<div class="rightthree-bot">
+							<div>
+								<a class="left" href="#"><img class="rightthree-bot-img " src="img/you2.png" /></a>
+								<div class="rightthree-bot-last right"><b>加关注</b></div>
+								<a href="#" class="rightthree-bot-mid">
+									<p class="linelimit"><b>香蕉鱼书店sdfasd sdsdfsdfdssdfsdf</b></p>
+									<div class="linelimit">9999积分sdfsdfsdf</div>
+								</a>
+								<div class="clear"> </div>
+							</div>
+							<div>
+								<a class="left" href="#"><img class="rightthree-bot-img " src="img/you2.png" /></a>
+								<div class="rightthree-bot-last right"><b>加关注</b></div>
+								<a href="#" class="rightthree-bot-mid">
+									<p class="linelimit"><b>香蕉鱼书店sdfasd sdsdfsdfdssdfsdf</b></p>
+									<div class="linelimit">9999积分sdfsdfsdf</div>
+								</a>
+								<div class="clear"> </div>
+							</div>
+							<div>
+								<a class="left" href="#"><img class="rightthree-bot-img " src="img/you2.png" /></a>
+								<div class="rightthree-bot-last right"><b>加关注</b></div>
+								<a href="#" class="rightthree-bot-mid">
+									<p class="linelimit"><b>香蕉鱼书店sdfasd sdsdfsdfdssdfsdf</b></p>
+									<div class="linelimit">9999积分sdfsdfsdf</div>
+								</a>
+								<div class="clear"> </div>
+							</div>
+						</div>
+					</div>
+					<div class="rightfour">
+						<div class="rightfour-top"><b>推荐关注</b>
+
+						</div>
+						<div class="rightfour-bot">
+							<div>
+								<a href="#"><img class="rightfour-bot-img left" src="img/you2.png" /></a>
+								<div class="rightfour-bot-last right"><b>加关注</b></div>
+								<a class="rightfour-bot-mid left" href="#">
+									<p class="linelimit"><b>香蕉鱼书店</b></p>
+									<div class="linelimit">推荐原因</div>
+								</a>
+								<div class="clear"> </div>
+							</div>
+							<div>
+								<a href="#"><img class="rightfour-bot-img left" src="img/you2.png" /></a>
+								<div class="rightfour-bot-last right"><b>加关注</b></div>
+								<a class="rightfour-bot-mid left" href="#">
+									<p class="linelimit"><b>香蕉鱼书店</b></p>
+									<div class="linelimit">推荐原因</div>
+								</a>
+								<div class="clear"> </div>
+							</div>
+							<div>
+								<a href="#"><img class="rightfour-bot-img left" src="img/you2.png" /></a>
+								<div class="rightfour-bot-last right"><b>加关注</b></div>
+								<a class="rightfour-bot-mid left" href="#">
+									<p class="linelimit"><b>香蕉鱼书店</b></p>
+									<div class="linelimit">推荐原因</div>
+								</a>
+								<div class="clear"> </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+
+		</div>
+		<div class="bottompart">
+			<div class="bottompart_cont ww">
+				<div class="bottompart-head">
+					<div>
+						<a class="bottompart-head-top" href="#"><span>购物支付</span></a>|
+						<a href="#"><span>账户管理</span></a>|
+						<a href="#"><span>关于我们</span></a>|
+						<a class="bottompart-head-bot" href="#"><span>常见问题</span></a>
+					</div>
+				</div>
+				<div class="bottompart-mid">
+					<div class="left">
+						<div>客服热线：
+							<a href="#">400-114-3658</a>
+						</div>
+						<div>工作时间：周一到周日 ( 8:00-17:00 )</div>
+					</div>
+					<div class="left">
+						<div class="bottompart-mid-three">
+							官方Q群：
+							<a href="#">475107413</a> |
+							<a href="#">370147338</a>
+						</div>
+						<div class="bottompart-mid-attend">
+							<div class="left">关注我们：</div>
+							<ul class="left">
+								<li class="bottompart-attend-fir">
+									<a href="#">新浪微博</a>
+								</li>
+								<li class="bottompart-attend-sec">
+									<a href="#">公众号</a>
+								</li>
+								<li class="bottompart-attend-thr">
+									<a href="#">APP下载</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="clear"></div>
+				</div>
+				<div class="bottompart-friendly">&nbsp;&nbsp;友情链接：
+					<span><a href="#">3658商城</a></span>
+					<span><a href="#">常客网</a></span>
+				</div>
+				<div class="bottompart-copyright" align="center">
+					<div> ©2015-2016上海沂光网络科技有限公司版权所有，并保留所有权利</div>
+					<div>ICP备案证书号：沪ICP备16003588号-1</div>
+				</div>
+				<div class="bottompart-mark" align="center">
+					<a target="_blank" href="#"><img src="img/shangbiao1.jpg" alt="" /></a>
+					<a target="_blank" href="#"><img src="img/shangbiao2.jpg" alt="" /></a>
+					<a target="_blank" href="#"><img src="img/shangbiao3.jpg" alt="" /></a>
+					<a target="_blank" href="#"><img src="img/shangbiao4.jpg" alt="" /></a>
+					<a target="_blank" href="#"><img src="img/shangbiao5.jpg" alt="" /></a>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-1.8.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(document).ready(function(e) {
+			$("#alt").click(function() {
+				$("#TEXT").insertAtCaret("@");
+			});
+			$(".lefttwo span").click(function() {
+				$(this).addClass("bg-nav").siblings().removeClass("bg-nav")
+			});
+			$(".lefttwo-bottom span").hover(function() {
+				$(this).addClass("bg-nav2").siblings().removeClass("bg-nav2")
+			});
+		});
+
+		function shrink() {
+			$(".word-pic,.leftthree-bot,.leftthree-bt").toggle();
+			$(".bt-leftthree").hasClass("bt-leftthree-2")?$(".bt-leftthree").removeClass("bt-leftthree-2"):$(".bt-leftthree").addClass("bt-leftthree-2");;
+//			if($(".bt-leftthree").hasClass("bt-leftthree-2")){
+//				$(".bt-leftthree").removeClass("bt-leftthree-2");
+//				$(".bt-leftthree").addClass("bt-leftthree-1");
+//				}
+//			else{
+//				$(".bt-leftthree").removeClass("bt-leftthree-1");
+//				$(".bt-leftthree").addClass("bt-leftthree-2");
+//			}
+		}
+
+		function btpublic() {
+			$(".public-layer").toggle();
+		}
+	</script>
+
+</html>

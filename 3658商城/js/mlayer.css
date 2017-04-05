@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+.mlayer-shadow {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 9000;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	filter: alpha(opacity=10);
+	-moz-opacity: 0.1;
+	opacity: 0.1;
+}
+
+.mlayer-loading {
+	position: fixed;
+	left: 50%;
+	top: 40%;
+	z-index: 9100;
+	width: 60px;
+	margin-left: -30px;
+	text-align: center;
+	display: none;
+}
+
+.mlayer-msg {
+	position: fixed;
+	left: 0;
+	top: 30%;
+	width: 100%;
+	z-index: 9100;
+	text-align: center;
+	display: none;
+}
+
+.mlayer-msg-m {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	max-width: 300px;
+	padding: 15px 30px;
+	background: #333;
+	color: #fff;
+	border-radius: 3px;
+}

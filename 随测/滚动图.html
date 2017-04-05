@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			ul,li{list-style: none;}
+			.js-banner{max-width: 600px;height:50px;margin: 0 auto;overflow: hidden;border: 1px solid #FC8100;}
+			.js-banner ul{width: 2000px;}
+			.js-banner li{float:left;padding: 5px 0;height: 40px;}
+			.js-banner li img{height: 100%;margin: 0px;padding: 0px;margin:0 10px;cursor: pointer;}
+		</style>
+	</head>
+	<body>
+		<div class="js-banner">
+			<ul>
+				<li><a href=""><img src="img/btm_3.gif" alt=""/></a></li>
+				<li><a href=""><img src="img/btm_2.png" alt=""/></a></li>
+				<li><a href=""><img src="img/btm_1.png" alt=""/></a></li>
+				<li><a href=""><img src="img/btm_4.jpg" alt=""/></a></li>
+				<li><a href=""><img src="img/btm_5.png" alt=""/></a></li>
+				<li><a href=""><img src="img/btm_6.png" alt=""/></a></li>
+			</ul>
+		</div>
+	</body>
+	<script src="js/jquery-1.8.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		scrollleft();
+		function scrollleft(){
+		 var  marleft= $(".js-banner ul").css("margin-left");
+//		  $(".js-banner li:first").appendTo($(".js-banner ul"));
+         var first_img_width = $(".js-banner li:first img").width();
+         var margin_width=parseInt($(".js-banner li:first img").css("margin-left"))*2;
+         var wid=first_img_width+margin_width;
+		  var tshow = setInterval(scrollauto,50);
+		 
+		  $(".js-banner li").hover(function(){
+		  	clearInterval(tshow);
+		  },function(){
+		  	tshow = setInterval(scrollauto,50);
+		  })
+	 	} 
+		function scrollauto(){
+		  	 first_img_width = $(".js-banner li:first img").width();
+       		  margin_width=parseInt($(".js-banner li:first img").css("margin-left"))*2;
+       		  wid=first_img_width+margin_width;
+		  	 var newmarginleft = parseInt( $(".js-banner ul").css("margin-left"))-1;
+		  
+		  	 $(".js-banner ul").animate({"margin-left":newmarginleft+"px"},0);
+//		  	 $(".js-banner ul").css({"margin-left":newmarginleft+"px"});
+		  	 if((newmarginleft+wid)<=1){
+		  	 	 $(".js-banner li:first").appendTo($(".js-banner ul"));
+		  	 	 $(".js-banner ul").css({"margin-left":"0px"});
+		  	 }
+		  }
+	</script>
+</html>

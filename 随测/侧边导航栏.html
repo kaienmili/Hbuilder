@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="cont" style="width: 500px;margin: 0 auto;background: #FC8100;height: 300px;margin-top: 200px;color: #fff;text-align: center;line-height: 50px;">
+			这是内容区
+		</div>
+		<div style="width: 500px;margin: 0 auto;background: #FC8100;height: 300px;margin-top: 200px;color: #fff;text-align: center;line-height: 50px;">
+			这是内容区
+		</div>
+		<div class="sidenav" style="position: fixed;top: 30px;right: 10px;background: #21546D;color: #fff;height: 500px;width: 100px;">
+			这是侧边栏
+		</div>
+	</body>
+	<script src="js/jquery-1.8.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		  $(document).ready(function(){
+		  	  //根据窗口大小动态确定导航的位置
+		  	  adjust();
+		  	  $(window).resize(function(){
+        	 	 adjust();
+       		  });
+		  })
+		  function adjust(){
+		    var mRight = ($(window).width() - $(".cont").width()) / 2 - $(".sidenav").width() - 15;
+	        var mTop = ($(window).height() - $(".sidenav").outerHeight()) / 2;
+	        $(".sidenav").css({'right' : mRight + 'px', 'top' : mTop + 'px'});
+		  }
+	</script>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/aos.css"/>
+	</head>
+	<style type="text/css">
+		body{
+			max-width: 100%;
+			overflow-x: hidden;
+		}
+		div{
+			height: 100px;
+			width: 40%;				
+			text-align: center;
+			line-height: 100px;
+			color: #fff;
+			font-size: 22px;
+			margin-bottom: 50px;
+			float: left;
+			margin-right: 5%;
+			margin-left: 5%;
+		}
+		.ff{
+			background: #21546D;	
+		}
+		.fff{
+			background: #606060;
+		}
+		.tt{
+			height:400px;
+			width: 100%;
+			background: #999999;
+		}
+	</style>
+	<body>
+		<div class="tt"></div>
+		<div class="ff" aos="fade-right">1</div>
+		<div class="ff" aos="fade-left">2</div>
+		<div class="ff"  aos="fade-up">3</div>
+		<div class="ff"  aos="fade-down">4</div>
+		<div class="ff"  aos="fade-up-right">5</div>
+		<div class="ff"  aos="fade-down-right">6</div>
+		<div class="ff"  aos="fade-up-left">7</div>
+		<div class="ff"  aos="fade-down-left">8</div>	
+		<div class="fff" aos="flip-up">1</div>
+		<div class="fff" aos="flip-down">2</div>
+		<div class="fff"  aos="flip-left">3</div>
+		<div class="fff"  aos="flip-right">4</div>
+	</body>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/aos.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		AOS.init({
+			easing: 'ease-out-back',
+			duration: 2000
+		});
+		$("div").each(function(){
+			$(this).html($(this).attr("aos"))
+		});
+	</script>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.w{width: 100%;min-width: 700px;}
+			.ww{width: 700px;margin: 0 auto;}
+			*{margin: 0;padding: 0;}
+			.js-slider{position: relative;}
+			ul,dl,ol,li{list-style: none;}
+			.slider-img{height: 271px;overflow: hidden;}
+			.slider-img img{position: relative;display: none;width: 100%;z-index:8;top: 0;left: 0;margin: 0;}
+			.slider-img>:first-child{display: block;}
+			.slider-bt-next,.slider-bt-prev{display: none;position: absolute;width: 20px;height: 40px;top: 40%;z-index: 10;background: #fff;line-height: 40px;opacity: 0.9;text-align: center;color: #111;cursor: pointer;}
+			.slider-bt-prev{left: 0;}
+			.slider-bt-next{right: 0;}
+			.slider-circle{position: absolute;bottom: 20px;right: 50px;z-index: 10;}
+			.slider-circle li{float: left;width: 20px;height: 20px;background: #fff;border-radius: 20px;margin:0 3px;border: 1px solid #999;cursor: pointer;}
+			.slider-circle .active{background: #ff5600;}
+			.js-slider:hover .slider-bt-next{display: block;}
+			.js-slider:hover .slider-bt-prev{display: block;}
+		</style>
+	</head>
+	<body>
+		<div class="w">
+			<div class="ww js-slider">
+				<div class="slider-img">
+					<img src="img/img1.jpg"/ alt="cc">
+					<img src="img/img2.jpg"/ alt="cc">
+					<img src="img/img3.jpg"/ alt="cc">
+					<img src="img/img4.jpg"/ alt="cc">
+				</div>
+				<div class="slider-circle">
+					<ul>
+					</ul>
+				</div>
+				<div class="slider-bt-prev">&lt;</div>
+				<div class="slider-bt-next">&gt;</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-1.8.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		slider();
+		function slider(){
+	      var selectnum = 0; 
+	      var prevnum = 0;
+		  var imgarray= $(".slider-img").find('img');
+		  for(var i=1;i<=imgarray.length;i++){
+		  	 $("<li></li>").appendTo(".slider-circle ul");
+		  };
+		  $(".slider-circle li").eq(0).addClass('active');
+		  setInterval(sliderauto,5000);
+		  var tshow=setInterval(sliderauto,5000);
+		  function sliderauto(){
+				selectnum = selectnum>=imgarray.length-1?0:++selectnum;
+				$(".slider-circle li").eq(selectnum).click();
+		  }
+		  $(".slider-bt-prev").click(function(){
+		  	selectnum = selectnum<=0?imgarray.length-1:--selectnum;
+		  	$(".slider-circle li").eq(selectnum).click();
+		  });
+		  $(".slider-bt-next").click(function(){
+		  	selectnum = selectnum>=imgarray.length-1?0:++selectnum;
+		  	$(".slider-circle li").eq(selectnum).click();
+		  }) 
+		  $(".slider-circle li").click(function(){
+		  	 clearInterval(tshow);
+		  	 var n=	$(this).index();
+		  	 $(".slider-circle li").removeClass('active')
+		  	 $(this).addClass('active');
+		  	 imgarray.eq(prevnum).fadeOut(400,function(){
+		  	 	imgarray.eq(n).fadeIn(400)
+		  	 });  	 
+		  	 prevnum = n;
+		  	 selectnum =n;
+		  	 tshow=setInterval(sliderauto,5000);
+		  })
+		}
+	</script>
+</html>

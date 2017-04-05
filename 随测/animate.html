@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			ul,li{
+				list-style: none;
+			}
+			li{
+				width: 100px;
+				color: #FC8100;
+				float: left;
+				position: relative;
+			}
+			a{
+				display: block;
+				background: url(img/top_phone.png) no-repeat center 0 ;
+				padding-top: 20px;
+				text-align: center;
+			}
+			.header{margin-top: 20px;}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<ul>
+				<li>
+					<a href="">运动鞋</a>
+				</li>
+				<li>
+					<a href="">新版朝服</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script src="js/jquery-1.8.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$("li").hover(function(){
+			  $(this).animate({marginTop:"-10px"});
+		},function(){
+			$(this).animate({marginTop:"0px"});
+		})
+	</script>
+</html>

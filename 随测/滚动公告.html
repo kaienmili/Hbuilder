@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#marquee p {
+				line-height: 30px;
+				margin: 0;
+				height: 30px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div style="height:90px;overflow:hidden;background: #999999;text-align: center;color: #fff;">
+			<div id='marquee'>
+				<a href="http://www.baidu.com" style="display: block;">
+					<p>第1段</p>
+				</a>
+				<a href="http://www.baidu.com"  style="display: block;">
+					<p>第11段</p>
+				</a>
+				<a href="http://www.baidu.com"  style="display: block;">
+					<p>第111段</p>
+				</a>
+				<a href="http://www.baidu.com"  style="display: block;">
+					<p>第1111段</p>
+				</a>
+				<a href="http://www.baidu.com"  style="display: block;">
+					<p>第11111段</p>
+				</a>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-1.8.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		$(document).ready(function() {
+			var tshow= setInterval(srcollauto, 50);
+			$("#marquee").hover(function() {
+				clearInterval(tshow)
+			}, function() {
+				tshow= setInterval(srcollauto, 50);
+			})
+		});
+		var i = 0;
+		function srcollauto(){	
+			i--;
+			var mar = $("#marquee").children(":first").css("margin-top");
+			$("#marquee").children(":first").css("margin-top", i + "px");
+			if(parseInt(mar) <= -29) {
+				$("#marquee").children(":first").css("margin-top", "0px");
+				var ccc = $("#marquee").children(":first").prop("outerHTML");
+				$("#marquee").append(ccc);
+				$($("#marquee").children(":first")).remove();
+				i = 0;
+			}
+		}
+		function autoScroll(obj) {
+			$(obj).find("ul").animate({
+				marginTop: "-39px"
+			}, 500, function() {
+				$(this).css({
+					marginTop: "0px"
+				}).find("li:first").appendTo(this);
+			})
+		}
+		$(function() {
+			setInterval('autoScroll(".apple")', 2000);
+		})
+	</script>
+
+</html>

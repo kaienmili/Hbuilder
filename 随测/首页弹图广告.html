@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			#mask_bg{
+				display: none;
+				position: fixed;
+				height: 100%;
+				width: 100%;
+				opacity: 0.3;
+				background: #000;
+				z-index: 10;
+			}
+			#mask{
+				position: fixed;
+				z-index: 11;
+				width: 0;
+			}
+			.closebt{
+				position: absolute;
+				right: 0px;
+				height: 20px;
+				width: 20px;
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="mask_bg"></div>
+		<div id="mask" >
+			<div class="closebt"  onclick="dd()" ><img style="width: 100%;" src="img/pic1.jpg"/></div>
+			<img style="width: 100%;" src="img/pic1.jpg" />
+		</div>
+		<div class="bt-img"><img src="img/icon-bt1.jpg" /></div>
+	</body>
+	<script src="js/jquery-1.8.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#mask_bg").show();
+			$(".closebt").show();
+			$("#mask").css({ "width": "300px", "top": "100px" ,"left":"100px"});
+			setTimeout(dd, 1000);		
+			$(".bt-img").click(function(){
+				cc();
+			});
+			$("#mask_bg").click(function(){
+				dd();
+			});
+		})
+		function cc() {
+				$("#mask").animate({ width: '300px', top: '100px',left:'100px' }, 2000, function(){
+					$("#mask_bg").show();
+					$(".closebt").show();
+				});
+			}
+		function dd() {
+				$("#mask_bg").hide();
+				$("#mask").animate({ width: '0px', top: '0px' ,left:'0px'}, 2000,function(){
+					$(".closebt").hide();
+				});
+			}
+	</script>
+
+</html>

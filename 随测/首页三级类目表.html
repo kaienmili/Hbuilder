@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			ul,ol,dl,li{list-style: none;}
+			.w{
+				width: 100%;
+				min-width: 700px;
+				margin-top: 100px;
+				border-bottom: 1px solid #FF5600;
+			}
+			.ww{
+				width: 700px;
+				margin: 0 auto;
+				height: 35px;
+			}
+			.category{
+				position: relative;
+				width: 190px;
+				color: #fff;
+			}
+			.category h2{
+				background: #ff5600;
+				text-align: center;
+				line-height: 35px;
+				}	
+			.category>div{
+				background: #606060;
+				opacity: 1;
+			}
+			.category div li{;padding: 6px;}
+			.category div li div{position: absolute;top: 35px;left: 190px;width: 200px;height: 400px;padding: 10px;z-index: 10;background: #606060;display: none;}
+			.category div li:hover{background: #ff5600;}
+			.category div li:hover div{display: block;}
+		</style>
+	</head>
+	<body>
+		<div class="w">
+			<div class="ww">
+				<div class="category">
+					<h2>全部商品</h2>
+					<div>
+						<ul>
+							<li>
+								服装
+								<div>服装奥dfd</div>
+							</li>
+							<li>
+								家具
+								<div>沙发奥</div>
+							</li>
+							<li>
+								鞋子
+								<div>鞋子奥</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<ul>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
